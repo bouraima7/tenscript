@@ -1,0 +1,449 @@
+﻿IP Address,asset.name,asset.operating_system,asset.tags,definition.description,definition.name,definition.solution,id,output,severity
+10.224.200.255,etlinfaapp82p,Red Hat Enterprise Linux Server (7.9),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Oracleupgrade""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""Approval Group"",""value"":""AMT-Data Quality \u0026 Engineering""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Operating Systems"",""value"":""Linux""}]","The remote Redhat Enterprise Linux 7 host has packages installed that are affected by a vulnerability as referenced in the RHSA-2023:7743 advisory.
+
+  - A use after free vulnerability exists in curl <7.87.0. Curl can be asked to *tunnel* virtually all     protocols it supports through an HTTP proxy. HTTP proxies can (and often do) deny such tunnel operations.
+    When getting denied to tunnel the specific protocols SMB or TELNET, curl would use a heap-allocated struct     after it had been freed, in its transfer shutdown code path. (CVE-2022-43552)
+
+Note that Nessus has not tested for this issue but has instead relied only on the application's self-reported version number.",RHEL 7 : curl (RHSA-2023:7743),"Update the affected curl, libcurl and / or libcurl-devel packages.",0f64ac6c-97a2-43e8-a286-2019525f38de,"Name          : libcurl-devel
+Version       : 7.29.0-59.el7_9.1
+Fixed version : 7.29.0-59.el7_9.2",Medium
+10.224.205.180,amtsqlec216p2.amtrak.ad.nrpc,Microsoft Windows Server 2016 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - Access Control""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2016""}]","The remote Windows host is missing security update 5033373. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+  - A division-by-zero error on some AMD processors can potentially return speculative data resulting in loss     of confidentiality. (CVE-2023-20588)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033373: Windows 10 Version 1607 and Windows Server 2016 Security Update (December 2023),Apply Security Update 5033373,33f23d92-6893-477f-af08-cd58661e0199,Kbs : 5033373,High
+10.3.1.60,addcazu01p,Microsoft Windows Server 2016 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""ADDCAZU01P.amtrak.ad.nrpc""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""MIPAPP21T""},{""category"":""Operating Systems"",""value"":""Windows Server 2016""},{""category"":""Owner"",""value"":""C1-C2 Master""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""Approval Group"",""value"":""AMT-Identity and Access Management""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""Azure""},{""category"":""Compliance"",""value"":""PCI Range""},{""category"":""Compliance"",""value"":""PCI Scope - Dynamic""}]","The remote Windows host is missing security update 5033373. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+  - A division-by-zero error on some AMD processors can potentially return speculative data resulting in loss     of confidentiality. (CVE-2023-20588)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033373: Windows 10 Version 1607 and Windows Server 2016 Security Update (December 2023),Apply Security Update 5033373,6172cfc8-6395-4ee5-9d0b-64bb24b31cf6,Kbs : 5033373,High
+10.3.1.10,addcazu02p,Microsoft Windows Server 2016 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""ADDCAZU01P.amtrak.ad.nrpc""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""MIPAPP21T""},{""category"":""Owner"",""value"":""C1-C2 Master""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""Approval Group"",""value"":""AMT-Identity and Access Management""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""Azure""},{""category"":""Operating Systems"",""value"":""Windows Server 2016""},{""category"":""Compliance"",""value"":""PCI Range""},{""category"":""Compliance"",""value"":""PCI Scope - Dynamic""}]","The remote Windows host is missing security update 5033373. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+  - A division-by-zero error on some AMD processors can potentially return speculative data resulting in loss     of confidentiality. (CVE-2023-20588)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033373: Windows 10 Version 1607 and Windows Server 2016 Security Update (December 2023),Apply Security Update 5033373,6e53c125-0868-41da-b7c9-ba89b8e6acd2,Kbs : 5033373,High
+10.224.207.50,symanteclua86p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2-Sep""},{""category"":""Owner"",""value"":""Amtrak_AWS_EC2_Instances_09062023 Part 3""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,8b05b07b-eadd-4ec6-b1b2-a5e4f7aa6d6b,Kbs : 5033371,High
+10.3.1.5,addcazucmg01p,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""ADDCAZU01P.amtrak.ad.nrpc""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""MIPAPP21T""},{""category"":""Owner"",""value"":""C1-C2 Master""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""Approval Group"",""value"":""No Group Assigned""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""Azure""},{""category"":""Compliance"",""value"":""PCI Range""},{""category"":""Compliance"",""value"":""PCI Scope - Dynamic""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,8b0741b1-2e73-40bc-99db-a427bbb302b3,Kbs : 5033371,High
+10.224.205.250,arcgismon89p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - esriarcgisenterprise""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,8b644a00-243b-4350-84ed-bc62a1c8b4bc,Kbs : 5033371,High
+10.224.233.179,bobjapp85p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - bobj""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,8c62154a-24d3-49ec-8b88-de396b55c22d,Kbs : 5033371,High
+10.224.206.90,arcgisdata87p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - esriarcgisenterprise""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,928bda40-f732-4216-a1b3-0d5048fcc2ab,Kbs : 5033371,High
+10.224.201.122,adcert82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - activedirectory""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""Owner"",""value"":""C1-C2 Master""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,92f64eaf-0f11-4514-96a3-c467de485f0f,Kbs : 5033371,High
+10.224.205.197,igelapp81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - igel""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,940cb3c4-c52c-4347-a056-189331c38b89,Kbs : 5033371,High
+10.224.206.180,adcert81p.cert,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - activedirectory""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""Owner"",""value"":""C1-C2 Master""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,94ea885b-2bd2-4339-9293-bf15b2fa9d9a,Kbs : 5033371,High
+10.224.207.192,ilmsltqme83p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - ilms""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 2""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Applications"",""value"":""ILMS""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,99a998e7-a962-48d2-b4dc-2d9e6bb5a25d,Kbs : 5033371,High
+10.3.1.6,adtools82p,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""ADDCAZU01P.amtrak.ad.nrpc""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""MIPAPP21T""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""Azure""},{""category"":""Compliance"",""value"":""PCI Range""},{""category"":""Compliance"",""value"":""PCI Scope - Dynamic""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,9e072893-fc57-4997-804a-a7c29a253165,Kbs : 5033371,High
+10.224.204.237,ideraapp82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""Location"",""value"":""Internal""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Location"",""value"":""AWS""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,9e931f57-7c72-4c44-b4d4-37b1aa819e9e,Kbs : 5033371,High
+10.224.201.86,symantecdcs84p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2-Sep""},{""category"":""Owner"",""value"":""Amtrak_AWS_EC2_Instances_09062023 Part 3""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,a1516565-f234-4e51-a4f7-09580f9afe89,Kbs : 5033371,High
+10.3.97.4,msproxyapp84p,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""MIPAPP21T""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""PCI Scope - Dynamic""},{""category"":""Compliance"",""value"":""PCI Range""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""Azure""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,a436a860-28f2-47fd-a34e-9cac7b99685f,Kbs : 5033371,High
+10.224.201.90,ilmsdbs81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - ilms""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 2""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,a755b1fe-b83d-47dd-966f-736e6f5d99bd,Kbs : 5033371,High
+10.224.204.89,edcmcts81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Pr22documentum""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,aa35017e-bd2d-4f34-a656-00a7674964ea,Kbs : 5033371,High
+10.224.200.230,liftnet81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Liftnet""},{""category"":""Owner"",""value"":""Amtrak_AWS_EC2_Instances_09062023 Part 3""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,aaaf0ef4-2abd-4ad6-a8b9-f9562253c2fe,Kbs : 5033371,High
+10.224.203.137,edcmapp82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Pr22documentum""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,b18dc7f6-b5ea-4abe-9eba-45fec6d83be5,Kbs : 5033371,High
+10.224.205.20,eersapps82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - eers""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 2""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,b2fe03c6-36ef-4482-87d2-40c2188b49ab,Kbs : 5033371,High
+10.224.206.137,arcgishost86p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - esriarcgisenterprise""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,b32ca3f9-73ce-4a91-80e3-e8bd575f0283,Kbs : 5033371,High
+10.224.238.147,apddispweb83p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - apdcadupgrade""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,bbf054d7-8589-4964-b037-84ab91c8cf94,Kbs : 5033371,High
+10.224.201.19,alertusapp82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - alertus2023""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,be5859d5-a8d1-40f7-8113-33075e8485fe,Kbs : 5033371,High
+10.224.206.29,printerlogic82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Location"",""value"":""AWS""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,c0651cc6-b07b-4ad8-9ad6-43116578c64d,Kbs : 5033371,High
+10.3.1.4,addcazurad01p,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""ADDCAZU01P.amtrak.ad.nrpc""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""MIPAPP21T""},{""category"":""Owner"",""value"":""C1-C2 Master""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""Approval Group"",""value"":""No Group Assigned""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""Azure""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Compliance"",""value"":""PCI Range""},{""category"":""Compliance"",""value"":""PCI Scope - Dynamic""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,c336801d-650f-4d47-a8c2-f7f27a06cb7e,Kbs : 5033371,High
+10.224.219.136,etlinfaapp83p,Red Hat Enterprise Linux Server (7.9),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""Approval Group"",""value"":""AMT-Data Quality \u0026 Engineering""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - informatica""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Operating Systems"",""value"":""Linux""}]","The remote Redhat Enterprise Linux 7 host has packages installed that are affected by a vulnerability as referenced in the RHSA-2023:7743 advisory.
+
+  - A use after free vulnerability exists in curl <7.87.0. Curl can be asked to *tunnel* virtually all     protocols it supports through an HTTP proxy. HTTP proxies can (and often do) deny such tunnel operations.
+    When getting denied to tunnel the specific protocols SMB or TELNET, curl would use a heap-allocated struct     after it had been freed, in its transfer shutdown code path. (CVE-2022-43552)
+
+Note that Nessus has not tested for this issue but has instead relied only on the application's self-reported version number.",RHEL 7 : curl (RHSA-2023:7743),"Update the affected curl, libcurl and / or libcurl-devel packages.",c546f704-45bc-4d39-926f-b3fac3602e3d,"Name          : libcurl-devel
+Version       : 7.29.0-59.el7_9.1
+Fixed version : 7.29.0-59.el7_9.2",Medium
+10.224.234.105,apddispapp83p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - apdcadupgrade""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,c7049aa5-43db-4a02-aeab-260d6c83d8fe,Kbs : 5033371,High
+10.224.200.110,apddispmq81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - apdcadupgrade""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,cb3817c2-85ff-4d23-b7ff-75f9b0d0c914,Kbs : 5033371,High
+10.224.201.66,f5bigiq81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - f5bigiq""},{""category"":""Owner"",""value"":""Amtrak_AWS_EC2_Instances_09062023 Part 3""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,ce0145a7-0dbf-458f-a448-7d7aea3a38e8,Kbs : 5033371,High
+10.224.202.95,arcgisweb84p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - esriarcgisenterprise""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,ce61f5da-06a6-408a-af23-a4b3008f3e48,Kbs : 5033371,High
+10.224.233.80,lenelapp85p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - Access Control""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,d77ae29a-fba6-461f-97f3-35da8def36ec,Kbs : 5033371,High
+10.224.232.210,edcmcap82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Pr22documentum""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,d824b487-1476-42cf-a947-5b7a62f98d3a,Kbs : 5033371,High
+10.224.219.144,edcmotds81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Pr22documentum""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,d8d63a3c-8991-49ab-ab89-db395b3513cf,Kbs : 5033371,High
+10.224.206.181,bobjapp83p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - bobj""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,daab740e-6574-4b4e-8e02-5712cad6d408,Kbs : 5033371,High
+10.224.202.232,arcgislidar91p.workgroup,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,dae7bac3-f6b0-4437-9cf2-f9833bb0a28f,Kbs : 5033371,High
+10.224.216.94,edcmcap81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Pr22documentum""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,e12c2ce2-6f63-4e1e-8aaa-a19fb217651c,Kbs : 5033371,High
+10.224.207.108,arcgislrs83p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - esriarcgisenterprise""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,e1b6bea2-6717-4661-a0c1-b7a35fb51d2f,Kbs : 5033371,High
+10.224.223.46,bobjapp84p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - bobj""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,e3f80ada-2e0b-41bb-af5b-b404c0c06e66,Kbs : 5033371,High
+10.224.204.88,snowdisc81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2-Snow""},{""category"":""Owner"",""value"":""Amtrak_AWS_EC2_Instances_09062023 Part 3""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,e654c5d9-88fc-408d-9911-0caa7396623f,Kbs : 5033371,High
+10.224.204.90,apddispvsap81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - apdcadupgrade""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,e74c705d-6c59-44c1-9dde-5941072432b5,Kbs : 5033371,High
+10.224.201.155,symanteclua84p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2-Sep""},{""category"":""Owner"",""value"":""Amtrak_AWS_EC2_Instances_09062023 Part 3""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,ead438cb-88fb-4aaf-8be2-bca4dbf66a14,Kbs : 5033371,High
+10.224.200.90,lenelapp83p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - Access Control""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,f5e4fe79-889b-47b7-9c21-5af557de3641,Kbs : 5033371,High
+10.224.206.104,bttsapp84p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""Location"",""value"":""Internal""},{""category"":""Location"",""value"":""Cloud""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""Location"",""value"":""AWS""},{""category"":""All Objects"",""value"":""All Objects""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,f66fcae3-5de0-45f0-80b3-29d400b623f5,Kbs : 5033371,High
+10.224.200.108,apdiaproweb82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - apdiapro""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Location"",""value"":""Internal""},{""category"":""Location"",""value"":""AWS""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Location"",""value"":""Cloud""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,f79e78e5-90cd-40fb-a99d-9d0240c108bb,Kbs : 5033371,High
+10.3.96.20,test,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""MIPAPP21T""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""},{""category"":""Location"",""value"":""Azure""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""PCI Scope - Dynamic""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Compliance"",""value"":""PCI Range""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,f9a4775f-9d04-4e28-846d-fc15f61d75e9,Kbs : 5033371,High
+10.224.203.219,mwmssmdbs80p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2-ShopMap""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,fdace02f-1652-4216-985b-763cfc9c69f6,Kbs : 5033371,High
+10.224.207.113,apddispvsdb81p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2 - apdcadupgrade""},{""category"":""Owner"",""value"":""Amtrak AWS EC2 Instances Part 1""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,fdd377fe-2fcd-42b0-9b45-8a731423dfa3,Kbs : 5033371,High
+10.224.219.64,edcmdmapp82p.amtrak.ad.nrpc,Microsoft Windows Server 2019 Datacenter (10),"[{""category"":""10.0.0.0/8"",""value"":""Exclude Data Center""},{""category"":""PCI"",""value"":""All""},{""category"":""PCI"",""value"":""AWS Virtual Data Services""},{""category"":""PCI"",""value"":""ACI Config Server""},{""category"":""Owner"",""value"":""EC2- Pr22documentum""},{""category"":""10.0.0.0/8"",""value"":""Exclude Agents""},{""category"":""All Objects"",""value"":""All Objects""},{""category"":""Compliance"",""value"":""2023-Jun-02-PCI""},{""category"":""Location"",""value"":""Cloud""},{""category"":""Location"",""value"":""AWS""},{""category"":""Location"",""value"":""Internal""},{""category"":""Operating Systems"",""value"":""Windows Server 2019""}]","The remote Windows host is missing security update 5033371. It is, therefore, affected by multiple vulnerabilities
+
+  - Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability (CVE-2023-36006)
+
+  - Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability (CVE-2023-36696)
+
+  - Win32k Elevation of Privilege Vulnerability (CVE-2023-36011)
+
+Note that Nessus has not tested for these issues but has instead relied only on the application's self-reported version number.",KB5033371: Windows 10 version 1809 / Windows Server 2019 Security Update (December 2023),Apply Security Update 5033371,fec6a8c9-6785-47bf-a582-1474545dc21d,Kbs : 5033371,High
