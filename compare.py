@@ -1,5 +1,11 @@
 import pandas as pd
 
+#Compares vulnerbailities-verified.csv to IT Asset Inventory.xlsx
+#Makes matched.xlsx with the matched data
+
+# change the column name asset.display_ipv4 in the csv file to 'IP Address' so it 
+# can match the column name in the excel file
+
 def cross_reference_excel(f1, f2, search):
     # Read the Excel files
     df1 = pd.read_csv(f1)
@@ -22,5 +28,5 @@ f1 = r'vulnerabilities-verified.csv'
 f2 = r'IT Asset Inventory.xlsx'
 search = 'IP Address'
     
-cross_reference_excel(f1, f2, search)
+#cross_reference_excel(f1, f2, search)
 
